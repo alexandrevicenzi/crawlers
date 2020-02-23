@@ -1,0 +1,10 @@
+version: '3'
+services:
+  api:
+    build: .
+    ports:
+      - "6800:6800"
+    volumes:
+      - ./config/scrapyd.conf:/etc/scrapyd/scrapyd.conf
+      - .scrapyd:/var/lib/scrapyd
+
